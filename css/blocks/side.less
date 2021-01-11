@@ -1,0 +1,133 @@
+//  main: ../style.less
+
+.side {
+    position: fixed;
+    top: 0;
+    left: -265px;
+    width: 300px;   
+    background-color: #ffff;
+    height: 100%;
+    z-index: 99999999999999;
+    border-left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    display: block !important;
+    transition: left .2s linear;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+
+    }
+
+    @media @mobile-sm {
+        width: 100%;
+    }
+
+}
+
+.side__close {
+    width: 39px;
+    height: 39px;
+    cursor: pointer;
+    position: absolute;
+    background: none;
+    border: none;
+    padding: 0;
+    top: .9rem;
+    right: .9rem;
+    z-index: 1;
+
+    transition: transform .2s linear;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+    
+    &:focus {
+        outline: 0;
+    }
+}
+
+.side__user {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    border-bottom: 1px solid  rgba(@gray, .3);
+}
+
+.side__user-text {
+    margin: .5rem 0;
+}
+
+.side__title {
+    margin: 2rem 0;
+}
+
+.side__user-avatar {
+    width: 57px;
+    height: 57px;
+    
+    img {
+        border-radius: 50%;
+    }
+}
+
+// nav
+
+.side__nav {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.side__nav-link {
+    //padding: 0.66rem 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    font-size: 0.93rem;
+    color: @black;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+
+
+    &:after {
+        content: "";
+        width: 0px;
+        height: 2px;
+        background-color: @black;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        z-index: 1;
+        transition: width .2s linear;
+
+    }
+
+    &:hover:not(.side__nav-link--btn) {
+        &:after {
+            width: 100%;
+        }
+    }
+    //Modificators  
+    &--btn {
+        padding: 0.66rem 2rem;
+        border: 2px solid @black;
+        border-radius: 20px;
+
+        transition: background-color .2s linear, color .2s linear;
+
+        &:hover {
+            background-color: @black;
+            color: @white;
+
+        }
+    }
+}

@@ -1,0 +1,88 @@
+//  main: ../style.less
+.header {
+    padding: .5rem 0;
+
+    @media @mobile-sm    {
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__main {
+    display: flex;
+    align-items: center;
+
+
+    @media @mobile {
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.header__user {
+    display: flex;
+}
+
+.header__user-avatar {
+    width: 57px;
+    height: 57px;
+    margin-right: 1rem;
+    
+    img {
+        border-radius: 50%;
+    }
+}
+
+.header__user-content {
+    padding-left: 9px;
+}
+
+.header__user-name {
+    font-size: 1.06rem;
+    color: @black;
+    font-weight: 700;
+    line-height: 1.2rem;
+    margin-bottom: 3px;
+}
+
+.header__userprof {
+    font-size: 0.8rem;
+    color: rgba(#2B2A2C, .7);
+}
+
+
+
+.header__burger {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border: 0;
+    background: none;
+    margin-right: 100px;
+
+    &:focus {
+        outline: none;
+    }
+
+    @media @mobile {
+        display: block;
+        margin-right: 0;
+    }
+}
+
+.header__burger-icon {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

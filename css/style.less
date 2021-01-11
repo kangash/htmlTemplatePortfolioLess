@@ -1,0 +1,98 @@
+// out: ./style.css, compress: true, sourceMap: false
+@import "vars";
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 1rem;
+    color: @black;
+
+    transition: margin-left .2s linear;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+
+    &.side-active {
+        margin-left: 300px;
+
+        @media @mobile-sm {
+            margin-left: 0;
+            overflow: hidden;
+
+        }
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0 0 .3rem 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+// Vendor
+// @import "vendor/click";
+@import "vendor\\slick";
+
+// inner blocks
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/user";
+@import "blocks/nav";
+@import "blocks/intro";
+@import "blocks/social";
+@import "blocks/btn";
+@import "blocks/works";
+@import "blocks/portfolio";
+@import "blocks/about";
+@import "blocks/news";
+@import "blocks/articles";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/model-work";
+@import "blocks/timeline";
+@import "blocks/contact";
+@import "blocks/form";
+@import "blocks/side";
+
+
+// helpers
+
+.hide {
+    display: none; 
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+

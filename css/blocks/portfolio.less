@@ -1,0 +1,62 @@
+// main: ../style.less
+
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem 2.8rem;
+
+}
+
+.portfolio__col {
+    flex-basis: 33.3333%;
+    padding: 1rem;
+
+    @media @mobile {
+        flex-basis: 50%;
+    }
+    @media @mobile-sm {
+        flex-basis: 100%;
+    }
+}
+
+.work {
+    overflow: hidden;
+
+    box-shadow: 0 0 4px rgba(#000, .25 );
+    border-radius: 10px;
+
+    transition: box-shadow .2s linear;
+
+    &:hover {
+        box-shadow: 0 0 25px rgba(#000, .25 );
+    }
+
+}
+.work__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.work__content {
+    padding: 0.8rem;
+}
+
+.work__cat {
+    margin-bottom: 0.5rem;
+    font-size: .8rem;
+    color: @black;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.work__title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.06rem;
+    color: @black;
+    text-transform: uppercase;
+    font-weight: 700;
+}
